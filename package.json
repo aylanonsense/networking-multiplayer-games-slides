@@ -1,0 +1,9 @@
+{
+  "name": "networking-multiplayer-games-slides",
+  "version": "0.0.0",
+  "description": "Slides for a talk on networking multiplayer games.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
