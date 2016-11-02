@@ -14,12 +14,12 @@
 				background: none;
 				border: none;
 			}
-			* {
-				image-rendering: pixelated;
+			.reveal h1 {
+				font-size: 1.6em;
 			}
-			span.vocab {
-				font-weight: bold;
-				color: #00aded;
+			.reveal h2 {
+				text-transform: none;
+				margin-bottom: 0;
 			}
 		</style>
 
@@ -40,9 +40,46 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Networking Real-Time Multiplayer Games</h2>
+					<h1>Networking Real-Time Multiplayer Games</h1>
 					<img src="/img/ayla-circle.jpg" width="233" height="233" />
 					<p>Ayla Myers</p>
+				</section>
+
+				<section>
+					<h2>Thin Client</h2>
+					<img src="/img/thinclient1.png" width="960" height="600" />
+				</section>
+
+				<section>
+					<section>
+						<h2>Thin Client</h2>
+						<img src="/img/thinclient2.png" width="960" height="600" />
+					</section>
+
+					<section>
+						<h2>Thin Client</h2>
+						<img src="/img/thinclient3.png" width="960" height="600" />
+					</section>
+
+					<section>
+						<h2>Thin Client</h2>
+						<img src="/img/thinclient4.png" width="960" height="600" />
+					</section>
+
+					<section>
+						<h2>Thin Client</h2>
+						<img src="/img/thinclient5.png" width="960" height="600" />
+					</section>
+
+					<section>
+						<h2>Thin Client</h2>
+						<img src="/img/thinclient6.png" width="960" height="600" />
+					</section>
+				</section>
+
+				<section>
+					<h2>Thin Client</h2>
+					<img src="/img/thinclient7.png" width="960" height="600" />
 				</section>
 
 				<section>
@@ -391,12 +428,10 @@ Reveal.addEventListener( 'customevent', function() {
 
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+				controls: false,
+				progress: false,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'none', // none/fade/slide/convex/concave/zoom
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
