@@ -2,12 +2,49 @@
 
 	<head>
 		<title>Networking Real-Time Multiplayer Games</title>
+		<script type="text/javascript">
+			var BASE_URL = window.location.href;
+			if (BASE_URL.endsWith('/')) {
+				BASE_URL = BASE_URL.substring(0, BASE_URL.length - 1);
+			}
+			BASE_URL = BASE_URL.split('/#')[0];
+			if (window.location.href.indexOf('#')<0) {
+				history.pushState('', null, '/slides/networking-games/#/');
+			}
+			(function() {
+				// add styles
+				var styles = document.createElement('link');
+				styles.setAttribute('rel', 'stylesheet');
+				styles.setAttribute('type', 'text/css');
+				styles.setAttribute('href', BASE_URL + '/css/reveal.css');
+				document.head.appendChild(styles);
+				styles = document.createElement('link');
+				styles.setAttribute('rel', 'stylesheet');
+				styles.setAttribute('type', 'text/css');
+				styles.setAttribute('id', 'theme')
+				styles.setAttribute('href', BASE_URL + '/css/theme/black.css');
+				document.head.appendChild(styles);
+				styles = document.createElement('link');
+				styles.setAttribute('rel', 'stylesheet');
+				styles.setAttribute('type', 'text/css');
+				styles.setAttribute('href', BASE_URL + '/lib/css/zenburn.css');
+				document.head.appendChild(styles);
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+				// add script
+				var scripts = document.createElement('script');
+				// scripts.setAttribute('type', 'text/js');
+				scripts.setAttribute('src', BASE_URL + '/lib/js/head.min.js');
+				document.head.appendChild(scripts);
+				scripts = document.createElement('script');
+				// scripts.setAttribute('type', 'text/js');
+				scripts.setAttribute('src', BASE_URL + '/js/reveal.js');
+				document.head.appendChild(scripts);
+				scripts = document.createElement('script');
+				// scripts.setAttribute('type', 'text/js');
+				scripts.setAttribute('src', BASE_URL + '/js/init.js');
+				document.head.appendChild(scripts);
+			})();
+		</script>
 
 		<style>
 			.reveal section img {
@@ -22,15 +59,6 @@
 				margin-bottom: 0;
 			}
 		</style>
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
 	</head>
 
 	<body>
@@ -41,7 +69,7 @@
 			<div class="slides">
 				<section>
 					<h1>Networking Real-Time Multiplayer Games</h1>
-					<img src="/img/ayla-circle.jpg" width="233" height="233" />
+					<img src="/slides/networking-games/img/ayla-circle.jpg" width="233" height="233" />
 					<p>Ayla Myers</p>
 					<p style="color:#ff0">(Navigate these slides with spacebar)</p>
 				</section>
@@ -62,91 +90,91 @@
 
 				<section>
 					<h2>Thin Client</h2>
-					<img src="/img/thinclient1.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/thinclient1.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<section>
 						<h2>Thin Client</h2>
-						<img src="/img/thinclient2.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/thinclient2.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Thin Client</h2>
-						<img src="/img/thinclient3.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/thinclient3.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Thin Client</h2>
-						<img src="/img/thinclient4.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/thinclient4.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Thin Client</h2>
-						<img src="/img/thinclient5.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/thinclient5.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Thin Client</h2>
-						<img src="/img/thinclient6.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/thinclient6.png" width="960" height="600" />
 					</section>
 				</section>
 
 				<section>
 					<h2>Thin Client</h2>
-					<img src="/img/thinclient7.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/thinclient7.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<section>
 						<h2>Client-Side Prediction</h2>
-						<img src="/img/thinclient1.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/thinclient1.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Client-Side Prediction</h2>
-						<img src="/img/prediction1.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/prediction1.png" width="960" height="600" />
 					</section>
 				</section>
 
 				<section>
 					<h2>Client-Side Prediction</h2>
-					<img src="/img/prediction2.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/prediction2.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Client-Side Prediction</h2>
-					<img src="/img/prediction3.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/prediction3.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Latency Stabilization</h2>
-					<img src="/img/stabilization1.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/stabilization1.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Latency Stabilization</h2>
-					<img src="/img/stabilization2.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/stabilization2.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Latency Stabilization</h2>
-					<img src="/img/stabilization3.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/stabilization3.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Latency Stabilization</h2>
-					<img src="/img/stabilization4.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/stabilization4.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Latency Stabilization</h2>
-					<img src="/img/stabilization5.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/stabilization5.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Rewinds</h2>
-					<img src="/img/rewinds1.png" width="960" height="200" />
+					<img src="/slides/networking-games/img/rewinds1.png" width="960" height="200" />
 					<p>Let's create a game simulation that is:</p>
 					<ul>
 						<li>Deterministic</li>
@@ -158,88 +186,88 @@
 				<section>
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds2.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds2.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds3.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds3.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds4.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds4.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds5.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds5.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds6.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds6.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds7.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds7.png" width="960" height="600" />
 					</section>
 				</section>
 
 				<section>
 					<h2>Rewinds</h2>
-					<img src="/img/rewinds8.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/rewinds8.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds9.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds9.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds10.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds10.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Rewinds</h2>
-						<img src="/img/rewinds11.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/rewinds11.png" width="960" height="600" />
 					</section>
 				</section>
 
 				<section>
 					<h2>Rewinds</h2>
-					<img src="/img/rewinds12.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/rewinds12.png" width="960" height="600" />
 				</section>
 
 				<section>
 					<h2>Putting it Together</h2>
 					<p>Trade-off between latency and chance of rewinds</p>
-					<img src="/img/holistic1.png" width="960" height="500" />
+					<img src="/slides/networking-games/img/holistic1.png" width="960" height="500" />
 				</section>
 
 				<section>
 					<section>
 						<h2>Putting it Together</h2>
-						<img src="/img/holistic2.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/holistic2.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Putting it Together</h2>
-						<img src="/img/holistic3.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/holistic3.png" width="960" height="600" />
 					</section>
 
 					<section>
 						<h2>Putting it Together</h2>
-						<img src="/img/holistic4.png" width="960" height="600" />
+						<img src="/slides/networking-games/img/holistic4.png" width="960" height="600" />
 					</section>
 				</section>
 
 				<section>
 					<h2>Putting it Together</h2>
-					<img src="/img/holistic5.png" width="960" height="600" />
+					<img src="/slides/networking-games/img/holistic5.png" width="960" height="600" />
 				</section>
 
 				<section>
@@ -252,30 +280,6 @@
 			</div>
 
 		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-				progress: false,
-				transition: 'none',
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
 
 	</body>
 </html>
